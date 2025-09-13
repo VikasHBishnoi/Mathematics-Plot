@@ -2,6 +2,7 @@ import { ChangeEvent, SetStateAction } from "react";
 import Expression from "../Expression/Expression";
 import CheckboxItemList from "../FormElements/CheckboxItem/CheckbotItemList";
 import { ExpressionInterface, ExpressionParameters } from "../../Interface";
+import Button from "../FormElements/Button/Button";
 
 interface ExpressionSelectorProps {
   expressionArray: ExpressionInterface[];
@@ -121,9 +122,7 @@ const ExpressionSelector: React.FC<ExpressionSelectorProps> = ({
           />
         </CheckboxItemList>
       ))}
-      <button type="button" onClick={handleAddExpression}>
-        Add Expression
-      </button>
+      <Button onClick={handleAddExpression}>Add Expression</Button>
     </div>
   );
 };
