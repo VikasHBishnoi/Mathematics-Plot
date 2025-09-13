@@ -2,6 +2,7 @@ import React from "react";
 import Input from "../FormElements/Input/Input";
 import EquationCanvas from "../EquationCanvas/EquationCanvasProps";
 import { ExpressionInterface } from "../../Interface";
+import Button from "../FormElements/Button/Button";
 
 interface ExpressionProps {
   expressionId: string;
@@ -25,22 +26,9 @@ const Expression: React.FC<ExpressionProps> = ({
           inputValue={inputValue}
           handleInputChange={handleInputChange}
         />
-        <button
-          type="button"
-          onClick={onDelete}
-          style={{
-            background: "#ff4d4f",
-            color: "#fff",
-            border: "none",
-            borderRadius: "4px",
-            padding: "4px 8px",
-            cursor: "pointer",
-          }}
-          aria-label="Delete Expression"
-          title="Delete Expression"
-        >
+        <Button onClick={onDelete} bgClassName="cross-btn">
           &#10006;
-        </button>
+        </Button>
       </div>
       <EquationCanvas expression={expression} />
     </div>
